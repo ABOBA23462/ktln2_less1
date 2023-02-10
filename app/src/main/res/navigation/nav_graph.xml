@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.ktln2_less1.ui.fragments.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.ktln2_less1.ui.fragments.LanguageFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.ktln2_less1.ui.fragments.CinemaFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.ktln2_less1.ui.fragments.detailFragment.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="icon"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+</navigation>
